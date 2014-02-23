@@ -1,0 +1,11 @@
+<section>
+  <p>
+    <%= image_tag @image.photo.url %>
+  </p>
+  <p>
+    <strong>Text:</strong>
+    <%= @image.text %>
+  </p>
+  <%= link_to 'Edit', edit_image_path(@image) %>
+  <%= link_to 'Back', root_path %>
+</section>
