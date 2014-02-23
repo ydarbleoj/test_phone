@@ -56,6 +56,7 @@ gem 'carrierwave' # (0.9.0)
 gem 'fog' #(1.19.0)
 
 gem 'aws-sdk'
+gem 'aws-s3'
 
 gem 'rmagick' #(2.13.2)
 

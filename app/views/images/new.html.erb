@@ -1,9 +1,9 @@
 <h1>New Post</h1>
 <%= form_for(@image) do |f|  %>
   <div><%= f.label :text %><br>
-    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
-    <%= f.text_area :text %></div>
+    <%= f.text_area :text%></div>
   <div><%= f.label :photo %><br>
     <%= f.file_field :photo %></div><br>
+  <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
   <div><%= f.submit "Create my post", class: "form_button" %></div>
 <% end %>

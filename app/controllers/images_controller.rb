@@ -22,13 +22,18 @@ class ImagesController < ApplicationController
     key = File.basename("public/#{@image.photo.url}")
     bucket = s3.buckets[bucket_name]
     s3.buckets["goodevil"].objects[key].write(:file => file_name)
+    @image.update_attributes(aws_url: "https://s3.amazonaws.com/goodevil/"+"#{@image.photo.filename}")
     #File.delete("#{Rails.root}/public/#{@image.photo.url}")
 
+
     redirect_to @image
+
   end
 
   def show
     @image = Image.find(params[:id])
+
+
   end
 
   def update
