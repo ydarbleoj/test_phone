@@ -4,6 +4,9 @@
     <%= f.text_area :text%></div>
   <div><%= f.label :photo %><br>
     <%= f.file_field :photo %></div><br>
-  <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+  <div>
+    <label for="image_photo">Mobile Uploads</label>
+    <input type="file" capture="camera" accept="image/*" id="image_photo" name="image[photo]">
+  </div>
   <div><%= f.submit "Create my post", class: "form_button" %></div>
 <% end %>
