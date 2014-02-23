@@ -1,5 +1,5 @@
 TestPhone::Application.routes.draw do
-  root 'images#index'
+  root 'images#new'
   resources :images
   resources :sites
   # The priority is based upon order of creation: first created -> highest priority.
